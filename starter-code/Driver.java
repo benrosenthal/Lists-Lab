@@ -24,16 +24,42 @@ public class Driver {
 		
 		//Determine which data structure is fastest for each
 		//operation. Complete the action
+
+		//Insertions and Removals from any position in the LinkedList are faster than 
+		//the ArrayList. Because there is no need to shift the elements after every insertion and removal.
+
+		//1. //Delete the first, if any, Student with the last name of "Smith"
+
+		ListIterator<String> it = studentLinkedList.listIterator(0);
+		//boolean hasNotBeenRemoved = true;
+		while(it.hasNext() { //&& hasNotBeenRemoved == true)
+			if (it.next() == "Smith") { //&& hasNotBeenRemoved
+				it.remove();
+				break;
+				//hasNotBeenRemoved = false;
+			}
+		}	
 		
-		//Delete the first, if any, Student with the last name of "Smith"
+		//2. Change the name of the 3rd entry to "Joe Montana"// 
+		studentArrayList.get(2).replace("Jason Jones", "Joe Montana");
+
 		
-		//Change the name of the 3rd entry to "Joe Montana"
+		//3. Remove the 10th element
+
+		ListIterator<String> it2 = studentLinkedList.listIterator(0); //can this start at 8? 
+		while(it.hasNext()){
+			if (it.nextIndex() == 9) {
+				it.remove();
+				break;
+			}
+		}
 		
-		//Remove the 10th element
+	
 	}
 	
 	//To generate the ArrayList
-	private static void generateStudents(int numberOfStudents, List<Student> outList) {
+	private static void generateStudents(int numberOfStudents, List<Stu
+dent> outList) {
 		Random random = new Random();
 		
 		for(int i = 0; i < numberOfStudents; i++) {
